@@ -1,8 +1,8 @@
 
 let lima = {
-  minCustomers: 23,
-  maxCustomers: 65,
-  avgCookiesPerSale: 6.3,
+  minCustomers: 2,
+  maxCustomers: 16,
+  avgCookiesPerSale: 4.6,
   hourlySales: [],
   generateHourlySales: function() {
     for (let hour = 6; hour <= 19; hour++) {
