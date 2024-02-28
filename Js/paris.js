@@ -1,7 +1,8 @@
-let tokyo = {
-  minCustomers: 3,
-  maxCustomers: 24,
-  avgCookiesPerSale: 1.2,
+
+let paris = {
+  minCustomers: 23,
+  maxCustomers: 65,
+  avgCookiesPerSale: 6.3,
   hourlySales: [],
   generateHourlySales: function() {
     for (let hour = 6; hour <= 19; hour++) {
@@ -12,7 +13,7 @@ let tokyo = {
   },
   render: function() {
     let totalCookies = 0;
-    let salesList = document.getElementById('tokyo-sales');
+    let salesList = document.getElementById('paris-sales');
     for (let hour = 6; hour <= 19; hour++) {
       let cookies = this.hourlySales[hour - 6];
       totalCookies += cookies;
@@ -26,6 +27,6 @@ let tokyo = {
   }
 };
 
-tokyo.generateHourlySales();
-tokyo.render();
+paris.generateHourlySales();
+paris.render();
 
