@@ -1,0 +1,36 @@
+header {
+  background-color: black;
+  padding: 20px;
+  color: salmon;
+  font-style: italic;
+  text-align: center;
+  font-size: 3.0em;
+  font-family: "Righteous", sans-serif;
+  width: 100%;
+  margin:0;
+}
+
+nav{
+background-color:salmon;
+color:black;
+padding:0px;
+width:100%;
+text-decoration:none;
+margin-right:0px;
+}
+ul {
+  list-style-type: none;
+  margin:0;
+  list-style-type: none;
+}
+hr {
+  border: 1px solid black; /* Change the border style */
+  margin: 20px 0; /* Adjust spacing above and below the line */
+}
+footer {
+  background-color:lightgray;
+  padding:30px;
+  text-align:center;
+}
+
+
