@@ -1,4 +1,4 @@
-header {
+h1 {
   background-color: black;
   padding: 20px;
   color: salmon;
@@ -33,4 +33,14 @@ footer {
   text-align:center;
 }
 
+  thead {
+    background:grey;
+  }
+  th, td {
+    border:1px solid black;
+  }
+  
+  tfoot {
+    background:#eee;
+  }
 
