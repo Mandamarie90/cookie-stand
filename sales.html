@@ -7,19 +7,22 @@
     <link rel="stylesheet" href="./stylesheet/style.css">
 </head>
 <body>
-    <header>Welcome to Pat's Salmon Cookies!</header>
+    <header>
+      <h1>Welcome to Pat's Salmon Cookies!</h1>
     <nav> 
         <a href="index.html">Home</a>
       <a href="sales.html">Sales Data</a>
     </nav>
-    <table id="sales-table"></table>
+  </header>
   
-    <script src="./Js/main.js"></script>
-    <script src="./Js/seattle.js"></script>
-    <script src="./Js/tokyo.js"></script>
-    <script src="./Js/dubai.js"></script>
-    <script src="./Js/lima.js"></script>
-    <script src="./Js/paris.js"></script>
+    <main>
+    <table id="sales">
+    <thead id="salesTableHeader"></thead>
+      <tbody id="salesTableBody"> </tbody>
+      <tfoot id="salesTableFooter"></tfoot>
+      </table>
+      </main>
+    <script src="./Js/app.js"></script>
     
 </body>
 </html>
