@@ -53,14 +53,9 @@ Store.prototype.render = function() {
 
 
 function createTableHeader() {
-
-
   let header = document.getElementById("salesTableHeader");
-
   let row = document.createElement("tr");
   header.appendChild(row);
-
-
   let location = document.createElement("th");
   location.textContent = "Location";
   row.appendChild(location);
@@ -81,10 +76,7 @@ function createTableHeader() {
 
 
 function createTableFooter() {
-
   let footer = document.getElementById("salesTableFooter");
-
- 
   let row = document.createElement("tr");
   footer.appendChild(row);
 
@@ -104,7 +96,27 @@ function createTableFooter() {
   row.appendChild(mainTotal);
 
 }
+function addNewStore(event) {
+  event.preventDefault(); 
+  let form = event.target;
+  let location = form.location.value;
+  let minCustomers = parseInt(form.minCustomers.value);
+  let maxCustomers = parseInt(form.maxCustomers.value);
+  let avgCookies = parseFloat(form.avgCookies.value);
+  let newStore = new Store(location, minCustomers, maxCustomers, avgCookies);
+  newStore.render();
+  updateTableFooter();
+  form.reset(); 
+}
 
+function updateTableFooter() {
+  let footerRow = document.getElementById("salesTableFooter").querySelector("tr");
+  let cells = footerRow.querySelectorAll("td");
+  for (let i = 0; i < totalsPerHour.length; i++) {
+    cells[i + 1].textContent = totalsPerHour[i];
+  }
+  cells[cells.length - 1].textContent = totalSales;
+}
 
 function start() {
   console.log("Starting the process");
@@ -121,12 +133,14 @@ function start() {
 
   createTableHeader();
 
-  // print each location to the table
+ 
   for(let i=0; i<allStores.length; i++) {
     allStores[i].render();
   }
 
   createTableFooter();
+
+  document.getElementById("newStoreForm").addEventListener("submit", addNewStore);
 
 }
 
