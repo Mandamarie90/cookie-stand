@@ -11,3 +11,7 @@
 ## Wednesday Lighthouse
 
 ![Wednesday](./images/lighthouse2.png)
+
+## Thursday Lighthouse
+
+![Thursday](./images/lighthouse4.png)
